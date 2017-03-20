@@ -1,0 +1,260 @@
+/**
+ * @define utilities
+ * Size: breakpoint 1 (large)
+ */
+
+@media (--lg-viewport) {
+
+  /* Applies to flex container
+     ======================================================================== */
+
+  /**
+   * Container
+   */
+
+  .u-lg-flex {
+    display: flex !important;
+  }
+
+  .u-lg-flexInline {
+    display: inline-flex !important;
+  }
+
+  /**
+   * Direction: row
+   */
+
+  .u-lg-flexRow {
+    flex-direction: row !important;
+  }
+
+  .u-lg-flexRowReverse {
+    flex-direction: row-reverse !important;
+  }
+
+  /**
+   * Direction: column
+   */
+
+  .u-lg-flexCol {
+    flex-direction: column !important;
+  }
+
+  .u-lg-flexColReverse {
+    flex-direction: column-reverse !important;
+  }
+
+  /**
+   * Wrap
+   */
+
+  .u-lg-flexWrap {
+    flex-wrap: wrap !important;
+  }
+
+  .u-lg-flexNoWrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .u-lg-flexWrapReverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  /**
+   * Align items along the main axis of the current line of the flex container
+   */
+
+  .u-lg-flexJustifyStart {
+    justify-content: flex-start !important;
+  }
+
+  .u-lg-flexJustifyEnd {
+    justify-content: flex-end !important;
+  }
+
+  .u-lg-flexJustifyCenter {
+    justify-content: center !important;
+  }
+
+  .u-lg-flexJustifyBetween {
+    justify-content: space-between !important;
+  }
+
+  .u-lg-flexJustifyAround {
+    justify-content: space-around !important;
+  }
+
+  /**
+   * Align items in the cross axis of the current line of the flex container
+   * Similar to `justify-content` but in the perpendicular direction
+   */
+
+  .u-lg-flexAlignItemsStart {
+    align-items: flex-start !important;
+  }
+
+  .u-lg-flexAlignItemsEnd {
+    align-items: flex-end !important;
+  }
+
+  .u-lg-flexAlignItemsCenter {
+    align-items: center !important;
+  }
+
+  .u-lg-flexAlignItemsStretch {
+    align-items: stretch !important;
+  }
+
+  .u-lg-flexAlignItemsBaseline {
+    align-items: baseline !important;
+  }
+
+  /**
+   * Aligns items within the flex container when there is extra
+   * space in the cross-axis
+   *
+   * Has no effect when there is only one line of flex items.
+   */
+
+  .u-lg-flexAlignContentStart {
+    align-content: flex-start !important;
+  }
+
+  .u-lg-flexAlignContentEnd {
+    align-content: flex-end !important;
+  }
+
+  .u-lg-flexAlignContentCenter {
+    align-content: center !important;
+  }
+
+  .u-lg-flexAlignContentStretch {
+    align-content: stretch !important;
+  }
+
+  .u-lg-flexAlignContentBetween {
+    align-content: space-between !important;
+  }
+
+  .u-lg-flexAlignContentAround {
+    align-content: space-around !important;
+  }
+
+  /**
+   * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
+   */
+
+  /* postcss-bem-linter: ignore */
+
+  .u-lg-flex > *,
+  .u-lg-flexInline > * {
+    flex-shrink: 1; /* 1 */
+  }
+
+  /* Applies to flex items
+     ======================================================================== */
+
+  /**
+   * Override default alignment of single item when specified by `align-items`
+   */
+
+  .u-lg-flexAlignSelfStart {
+    align-self: flex-start !important;
+  }
+
+  .u-lg-flexAlignSelfEnd {
+    align-self: flex-end !important;
+  }
+
+  .u-lg-flexAlignSelfCenter {
+    align-self: center !important;
+  }
+
+  .u-lg-flexAlignSelfStretch {
+    align-self: stretch !important;
+  }
+
+  .u-lg-flexAlignSelfBaseline {
+    align-self: baseline !important;
+  }
+
+  .u-lg-flexAlignSelfAuto {
+    align-self: auto !important;
+  }
+
+  /**
+   * Change order without editing underlying HTML
+   */
+
+  .u-lg-flexOrderFirst {
+    order: -1 !important;
+  }
+
+  .u-lg-flexOrderLast {
+    order: 1 !important;
+  }
+
+  .u-lg-flexOrderNone {
+    order: 0 !important;
+  }
+
+  /**
+   * Specify the flex grow factor, which determines how much the flex item will
+   * grow relative to the rest of the flex items in the flex container.
+   *
+   * Supports 1-5 proportions
+   *
+   * 1. Provide all values to avoid IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   *
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+   *    http://git.io/vllWx
+   */
+
+  .u-lg-flexGrow1 {
+    flex: 1 1 0% !important; /* 1 */
+  }
+
+  .u-lg-flexGrow2 {
+    flex: 2 1 0% !important;
+  }
+
+  .u-lg-flexGrow3 {
+    flex: 3 1 0% !important;
+  }
+
+  .u-lg-flexGrow4 {
+    flex: 4 1 0% !important;
+  }
+
+  .u-lg-flexGrow5 {
+    flex: 5 1 0% !important;
+  }
+
+  /**
+   * Aligning with `auto` margins
+   * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .u-lg-flexExpand {
+    margin: auto !important;
+  }
+
+  .u-lg-flexExpandLeft {
+    margin-left: auto !important;
+  }
+
+  .u-lg-flexExpandRight {
+    margin-right: auto !important;
+  }
+
+  .u-lg-flexExpandTop {
+    margin-top: auto !important;
+  }
+
+  .u-lg-flexExpandBottom {
+    margin-bottom: auto !important;
+  }
+
+}
+

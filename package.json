@@ -1,0 +1,17 @@
+{
+  "name": "bc-2",
+  "version": "1.0.0",
+  "description": "Banner Creator v2",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "preprocess": "suitcss index.css build/build.css",
+    "setup": "npm install && mkdir -p build"
+  },
+  "author": "Stephen Carlson",
+  "license": "ISC",
+  "dependencies": {
+    "suitcss": "^2.0.0",
+    "suitcss-preprocessor": "^3.0.1"
+  }
+}

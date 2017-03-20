@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ameriprise Financial | Banner Creator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="suitcss.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="third-party/ejs_production.js" type="text/javascript"></script>
+  <script src="banner-creator.js"></script>
+</head>
+
+<body>
+
+<div class="header"><!-- Begin Header -->
+  <div class="container-fluid"><!-- Begin Header -->
+    <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+      <div class="Grid-cell-20"><img alt="Ameriprise Banner Creator" class="logo" src="images/banner-creator-logo.png" alt="Ameriprise Banner Creator"/></div>
+      <div class="Grid-cell-80"><h2 class="title">Banner Creator</h2></div>
+    </div><!-- End Grid -->
+  </div><!-- End Container -->
+</div><!-- End Header -->
+
+<div class="container-fluid"><!--Begin Main Content Wrapper -->
+
+  <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+    <div class="Grid-cell--100"><!-- Start Grid Cell -->
+      <h1 role="heading">Welcome to the Ameriprise Banner Creator</h1>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div><!-- End Grid Cell -->
+  </div><!-- End Grid -->
+
+  <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
+    <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+
+      <div class="Grid-cell--100"><!-- Start Grid Cell -->
+        <h3>The Basics</h3>
+        <p class="description">Select your banner type from the dropdown menu below.</p>
+        <select class="div-toggle" data-target=".banner-groups">
+          <option selected="selected">Select banner type:</option>
+          <option value="homepage" data-show=".homepage">Homepage Banner (Level 0)</option>
+          <option value="interior" data-show=".interior">Department Banner (Level 1)</option>
+          <option value="logout" data-show=".logout">Login/Logout Banner</option>
+        </select>
+      </div><!-- End Grid Cell -->
+    </div><!-- End Grid -->
+  </div><!-- End Grid Wrapper -->
+
+
+  <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell--100"><!-- Start Grid Cell -->
+          <h3>Select Banner Template</h3>
+          <p class="description">Every banner on Ameriprise.com uses a pre-specified template. Choose the template that suits your needs below. If you are unsure which template to use, see the <a href="https://www1.dev.ameriprise.com/boilerplate/ameriprise/modules/login-out-promotional-templates/" target="_blank">Ameriprise.com Boilerplate</a> for reference.</p>
+        </div><!-- End Grid Cell -->
+      </div><!-- End Grid -->
+    </div><!-- End Grid Wrapper -->
+
+  <div class="banner-groups">
+
+    <!-- Start Homepage templates ************************ -->
+    <div class="homepage hide">
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell--100"><!-- Start Cell -->
+          <p class="banner-group">Homepage Banner Templates</p>
+        </div><!-- End Cell -->
+      </div><!-- End Grid -->
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+
+        <div class="Grid-cell--50"><!-- Start Cell -->
+            <div class="banner-thumb hp-template-desc" id="hp-template-a">
+              <label class="template-image">
+              <img alt="Template" src="images/hp-template-a.jpg" width="438" height="211">
+              <p class="label-name">Template A</p>
+              <p class="features">Headline, CTA</p>
+            </div>
+          </label>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--50"><!-- Start Cell -->
+            <div class="banner-thumb hp-template-desc" id="hp-template-b">
+              <label class="template-image">
+              <img alt="Template" src="images/hp-template-b.jpg" width="438" height="211">
+              <p class="label-name">Template B</p>
+              <p class="features">Headline, Subhead, CTA</p>
+            </div>
+          </label>
+        </div><!-- End Cell -->
+      </div><!-- End Grid -->
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell--100"><!-- Start Cell -->
+          <p class="footnote">&#42;Note: Templates do not allow custom font sizes. All content must fit within the space provided by the template.</p>
+        </div>
+      </div>
+
+    </div><!-- End Homepage  -->
+
+
+    <!-- Start department templates ************************ -->
+    <div class="interior hide">
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell-center"><!-- Start Cell -->
+          <p class="banner-group">Department Banner Templates</p>
+        </div><!-- End Cell -->
+      </div><!-- End Grid -->
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+
+        <div class="Grid-cell--50"><!-- Start Cell -->
+          <div class="banner-thumb dl-template-desc" id="dl-template-a">
+            <label class="template-image">
+              <img alt="Template" src="images/dl-template-a.jpg" width="438" height="211">
+              <p class="label-name">Template A</p>
+              <p class="features">Headline over background image</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--50"><!-- Start Cell -->
+          <div class="banner-thumb dl-template-desc" id="dl-template-b">
+            <label class="template-image">
+              <img alt="Template" src="images/dl-template-b.jpg" width="438" height="211">
+              <p class="label-name">Template B</p>
+              <p class="features">Background image only</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+      </div><!-- End Grid -->
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell--100"><!-- Start Cell -->
+          <p class="footnote">&#42;Note: Templates do not allow custom font sizes. All content must fit within the space provided by the template.</p>
+        </div>
+      </div>
+
+    </div><!-- End interior  -->
+
+
+    <!-- Start logout templates ************************ -->
+    <div class="logout hide">
+      <div class="gridWrapper"><!-- Start Grid Wrapper -->
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell--100"><!-- Start Cell -->
+          <p class="banner-group">Login/Logout Banner Templates</p>
+        </div><!-- End Cell -->
+      </div><!-- End Grid -->
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-a">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-a.jpg" width="194" height="130">
+              <p class="label-name">Template A</p>
+              <p class="features">Headline, Subhead, CTA</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-b">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-b.jpg" width="194" height="130">
+              <p class="label-name">Template B</p>
+              <p class="features">Headline, Subhead, CTA, Disclaimer</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-c">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-c.jpg" width="194" height="130">
+              <p class="label-name">Template C</p>
+              <p class="features">Headline, CTA</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-d">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-d.jpg" width="194" height="130">
+              <p class="label-name">Template D</p>
+              <p class="features">Headline, CTA, Blue Overlay Box</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-e">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-e.jpg" width="194" height="130">
+              <p class="label-name">Template E</p>
+              <p class="features">Headline, Subhead, CTA, Co-branded Logo, Blue Overlay</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-f">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-f.jpg" width="194" height="130">
+              <p class="label-name">Template F</p>
+              <p class="features">Headline, Subhead, CTA, Credit Card Image</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-g">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-g.jpg" width="194" height="130">
+              <p class="label-name">Template G</p>
+              <p class="features">Headline, CTA, Ameriprise Compass Logo</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-h">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-b.jpg" width="194" height="130">
+              <p class="label-name">Template H</p>
+              <p class="features">(Full-width, login only) Headline, Subhead, CTA, Disclaimer</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+        <div class="Grid-cell--25"><!-- Start Cell -->
+          <div class="banner-thumb lo-template-desc" id="lo-template-i">
+            <label class="template-image">
+              <img alt="Template" src="images/lo-template-i.jpg" width="194" height="130">
+              <p class="label-name">Template I</p>
+              <p class="features">Headline, Subhead, CTA, Riversource Logo, Blue Box</p>
+            </label>
+          </div>
+        </div><!-- End Cell -->
+
+      </div><!-- End Grid -->
+
+    </div>
+
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell--100"><!-- Start Cell -->
+          <p class="footnote">&#42;Note: Templates do not allow custom font sizes. All content must fit within the space provided by the template.</p>
+        </div>
+      </div>
+
+    </div><!-- End interior  -->
+
+  <!-- End banner-group ************* -->
+
+  </div><!-- End Grid Wrapper -->
+
+  <div class="gridWrapper" id="form-holder"><!-- Start Grid Wrapper -->
+    <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+      <div class="Grid-cell--100"><!-- Start Grid Cell -->
+
+        <!-- HP - Form A ************* -->
+        <form class="form" id="hp-template-a-form">
+          <h3>Homepage Banner: Template A</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- HP - Form B ************* -->
+        <form class="form" id="hp-template-b-form">
+          <h3>Homepage Banner: Template B</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- DL - Form A ************* -->
+        <form class="form" id="dl-template-a-form">
+          <h3>Department Banner: Template A</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- DL - Form B ************* -->
+        <form class="form" id="dl-template-b-form">
+          <h3>Department Banner: Template B</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form A ************* -->
+        <form class="form" id="lo-template-a-form">
+          <h3>Login/Logout Banner: Template A</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form B ************* -->
+        <form class="form" id="lo-template-b-form">
+          <h3>Login/Logout Banner: Template B</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Disclaimer Text</p>
+            <input class="input_disclaimer" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form C ************* -->
+        <form class="form" id="lo-template-c-form">
+          <h3>Login/Logout Banner: Template C</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form D ************* -->
+        <form class="form" id="lo-template-d-form">
+          <h3>Login/Logout Banner: Template D</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form E ************* -->
+        <form class="form" id="lo-template-e-form">
+          <h3>Login/Logout Banner: Template E</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form F ************* -->
+        <form class="form" id="lo-template-f-form">
+          <h3>Login/Logout Banner: Template F</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form G ************* -->
+        <form class="form" id="lo-template-g-form">
+          <h3>Login/Logout Banner: Template G</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form H ************* -->
+        <form class="form" id="lo-template-h-form">
+          <h3>Login-only Banner: Template H (Full-width)</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Disclaimer Text</p>
+            <input class="input_disclaimer" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+        <!-- LO - Form I ************* -->
+        <form class="form" id="lo-template-i-form">
+          <h3>Logout Banner: Template I</h3>
+          <p class="description">Enter your banner copy using the form fields below.</p>
+          <div class="form-field">
+            <p>Headline</p>
+            <input class="input_headline" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Subhead</p>
+            <input class="input_subhead" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Call-to-Action (Button Label)</p>
+            <input class="input_cta" type="text"></input>
+          </div>
+          <div class="form-field">
+            <p>Disclaimer Text</p>
+            <input class="input_disclaimer" type="text"></input>
+          </div>
+          <div class="divider"></div>
+        </form>
+
+
+      </div><!-- End Grid Cell -->
+    </div><!-- End Grid -->
+  </div><!-- End Grid Wrapper -->
+
+  <div class="gridWrapper" id="img-uploader"><!-- Start Grid Wrapper -->
+    <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+      <div class="Grid-cell--100"><!-- Start Grid Cell -->
+        <h3>Select Your Image</h3>
+        <p class="description">Select your banner type from the dropdown menu below.</p>
+        <img class="img-preview" id="img-preview" src="#" alt="Preview image"/><br>
+        <input class="img-btn" type='file' onchange="readURL(this);" /><br>
+        <div class="buttonA" id="preview">GENERATE PREVIEW</div>
+      </div><!-- End Grid Cell -->
+    </div><!-- End Grid -->
+  </div><!-- End Grid Wrapper -->
+
+
+  <div class="banner-preview-bucket" id="logout-banner-1">
+    <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
+      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+        <div class="Grid-cell--75"><!-- Start Grid Cell -->
+          <h3>Banner Preview</h3>
+          <p class="description">Once your have filled out the form above, add your background image or color below and generate your final banner.</p>
+
+          <div id="banner-preview-holder">
+            <div class="banner-preview" id="bannerPreview">
+              <h2 class="bannerHeadline" id="headline"></h2>
+              <p class="subhead" id="subhead"></p>
+              <a class="bannerBTN" id="bannerCTA"></a>
+              <p class="disclaimer" id="disclaimer"></p>
+            </div>
+
+            <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+              <div class="Grid-cell--35"><!-- Start Grid Cell -->
+                <div class="buttonB" id="exportPNG">export as PNG</div>
+              </div>
+              <div class="Grid-cell--35"><!-- Start Grid Cell -->
+                <div class="buttonB" id="code">generate html</div>
+              </div>
+              <div class="Grid-cell--30"></div>
+            </div>
+
+          </div><!--end of banner-preview-holder -->
+
+        </div><!-- End Grid Cell -->
+      </div><!-- End Grid -->
+    </div><!-- End Grid Wrapper -->
+  </div>
+
+
+
+
+</div><!-- End Main Content Wrapper -->
+
+</body>
+</html>
