@@ -252,7 +252,7 @@ img {
   margin: 20px 0 0 30px;
   position: relative;
   left: 0;
-  top: 120px;
+  top: 150px;
 }
 
 .bannerBTN:hover {
@@ -363,7 +363,7 @@ label > input + img{ /* IMAGE STYLES */
   border:1px solid transparent;
 }
 
-.buttonA {
+.button-blue {
   background-color: #007AB6;
   font-size: 14px;
   color: #ffffff;
@@ -386,7 +386,7 @@ label > input + img{ /* IMAGE STYLES */
     color: #007AB6;
 }
 
-.buttonB {
+.button-grey {
   background-color: #53626F;
   font-size: 14px;
   color: #ffffff;
