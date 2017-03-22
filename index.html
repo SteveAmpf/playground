@@ -29,9 +29,8 @@
     </div><!-- End Grid Cell -->
   </div><!-- End Grid -->
 
-  <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
-    <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
-
+  <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+    <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
       <div class="Grid-cell--100"><!-- Start Grid Cell -->
         <h3>The Basics</h3>
         <p class="description">Select your banner type from the dropdown menu below.</p>
@@ -42,17 +41,17 @@
           <option value="logout" data-show=".logout">Login/Logout Banner</option>
         </select>
       </div><!-- End Grid Cell -->
-    </div><!-- End Grid -->
-  </div><!-- End Grid Wrapper -->
+    </div><!-- End Grid Wrapper Divider -->
+  </div><!-- End Grid -->
 
-  <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
-      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+  <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+    <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
         <div class="Grid-cell--100"><!-- Start Grid Cell -->
           <h3>Select Banner Template</h3>
           <p class="description">Every banner on Ameriprise.com uses a pre-specified template. Choose the template that suits your needs below. If you are unsure which template to use, see the <a href="https://www1.dev.ameriprise.com/boilerplate/ameriprise/modules/login-out-promotional-templates/" target="_blank">Ameriprise.com Boilerplate</a> for reference.</p>
         </div><!-- End Grid Cell -->
-      </div><!-- End Grid -->
     </div><!-- End Grid Wrapper -->
+  </div><!-- End Grid  -->
 
   <div class="banner-groups">
 
@@ -525,7 +524,7 @@
   <div class="gridWrapper" id="img-uploader"><!-- Start Grid Wrapper -->
     <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
       <div class="Grid-cell--100"><!-- Start Grid Cell -->
-        <h3>Select Your Image</h3>
+        <h3>Select Background Image</h3>
         <p class="description">Select your banner type from the dropdown menu below.</p>
         <img class="img-preview" id="img-preview" src="#" alt="Preview image"/><br>
         <input class="img-btn" type='file' onchange="readURL(this);" /><br>
@@ -534,32 +533,33 @@
     </div><!-- End Grid -->
   </div><!-- End Grid Wrapper -->
 
-  <div class="banner-preview-bucket" id="logout-banner-1">
-    <div class="gridWrapperDivider"><!-- Start Grid Wrapper -->
-      <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
-        <div class="Grid-cell--75"><!-- Start Grid Cell -->
+  <div class="banner-preview-bucket" id="logout-banner-1"><!-- start banner preview bucket -->
+    <div class="Grid Grid--fit Grid--withGutter"><!-- start grid -->
+      <div class="gridWrapperDivider"><!-- start grid wrapper -->
+        <div class="Grid-cell--75"><!-- start grid cell -->
           <h3>Banner Preview</h3>
           <p class="description">Once your have filled out the form above, add your background image or color below and generate your final banner.</p>
 
-          <div id="banner-preview-holder">
-            <div class="banner-preview" id="bannerPreview">
-              <h2 class="bannerHeadline" id="headline"></h2>
-              <p class="subhead" id="subhead"></p>
-              <a class="bannerBTN" id="bannerCTA"></a>
-              <p class="disclaimer" id="disclaimer"></p>
-            </div>
-
-            <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
-              <div class="Grid-cell--35"><!-- Start Grid Cell -->
-                <div class="button-grey" id="exportPNG">export as PNG</div>
-              </div>
-              <div class="Grid-cell--35"><!-- Start Grid Cell -->
-                <div class="button-grey" id="code">generate html</div>
-              </div>
-              <div class="Grid-cell--30"></div>
-            </div>
-
+          <div id="banner-preview-holder"><!-- Start banner-preview-holder -->
+          <!-- Old stuff goes here -->
           </div><!--end of banner-preview-holder -->
+
+          <canvas id="bannerCanvas">
+            Sorry, canvas not supported
+          </canvas>
+
+          <img id="start-image" src="https://www.ameriprise.com/cm/groups/public/@amp/@ameriprise/documents/images/p-026428.jpg" alt="" />
+
+          <div class="form-field">
+            <input  type='text' value='Headline' id='top-text' maxlength="25" />
+          </div>
+          <div class="form-field">
+            <input  type='text' value='Subhead' id='bottom-text' maxlength="50" />
+          </div>
+          <div class="form-field">
+            <input type='text' value='Call to Action' id='cta' maxlength="50" />
+          </div>
+
 
         </div><!-- End Grid Cell -->
       </div><!-- End Grid -->

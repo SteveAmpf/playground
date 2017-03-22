@@ -170,6 +170,12 @@ img {
   max-width: 100%;
 }
 
+#start-image {
+  left: -10000px;
+  top: -10000px;
+  position: absolute;
+}
+
 .contentWrapper {
   width: 100%;
   padding: 40px;
@@ -409,7 +415,6 @@ label > input + img{ /* IMAGE STYLES */
     color: #53626F;
 }
 
-
 form {
   display: none;
 }
@@ -422,8 +427,7 @@ form.active{
 }
 
 .form-field {
-  margin:20px 0 0 0;
-  height: 40px;
+  margin:20px 0;
 }
 
 div .banner-thumb.active-banner-toggle {
@@ -444,6 +448,8 @@ input {
   /*border-color: #ededed;*/
   outline: none;
   /*box-shadow: none;*/
+  margin:20px 0 0 0;
+  height: 40px;
 }
 
 input:focus {

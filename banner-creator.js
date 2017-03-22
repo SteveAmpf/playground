@@ -110,3 +110,121 @@ function textPreview(event) {
     }, 1000, 'swing');
 
 }
+
+/*********************************************************
+Create Canvas Elements
+*********************************************************/
+
+
+  var canvas = document.getElementById('bannerCanvas');
+  ctx = canvas.getContext('2d');
+
+  // Set the text style to that to which we are accustomed
+
+  canvas.width = 1180;
+  canvas.height = 520;
+
+  //  Grab the nodes
+  var img = document.getElementById('start-image');
+  var topText = document.getElementById('top-text');
+  var bottomText = document.getElementById('bottom-text');
+  var cta = document.getElementById('cta');
+
+  // When the image has loaded...
+  img.onload = function() {
+    drawCanvas()
+  }
+
+  topText.addEventListener('keydown', drawCanvas)
+  topText.addEventListener('keyup', drawCanvas)
+  topText.addEventListener('change', drawCanvas)
+
+  bottomText.addEventListener('keydown', drawCanvas)
+  bottomText.addEventListener('keyup', drawCanvas)
+  bottomText.addEventListener('change', drawCanvas)
+
+  cta.addEventListener('keydown', drawCanvas)
+  cta.addEventListener('keyup', drawCanvas)
+  cta.addEventListener('change', drawCanvas)
+
+
+  function drawCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    // Draw Headline
+    var text1 = document.getElementById('top-text').value;
+    ctx.font = '42px sans-serif';
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+
+    wrapText(ctx, text1, 25, 25, 600, 50, false);
+
+    // Draw Subhead
+    var text2 = document.getElementById('bottom-text').value;
+    ctx.font = '18px sans-serif';
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+
+    wrapText(ctx, text2, 31, 75, 300, 50, false);
+
+    //CTA Text
+    var cta = document.getElementById('cta').value;
+    var btnTxt = document.getElementById('cta').value;
+    var btnTextWidth = ctx.measureText(btnTxt).width;
+    console.log(btnTextWidth);
+
+    // Draw Button
+    ctx.beginPath();
+    ctx.fillStyle = "#007ab6";
+    ctx.rect(35, 220, btnTextWidth + 15, 50);
+    ctx.fill();
+
+    // Render Text
+    ctx.font = '16px sans-serif';
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+
+    wrapText(ctx, cta, 95, 237, btnTextWidth, 20, false);
+
+    //visual feeback
+    // ctx.fillText("width:" + ctx.measureText(btnTxt).width, 400, 50)
+    // ctx.fillText(btnTxt, 400, 100);
+
+  }
+
+  function wrapText(context, text, x, y, maxWidth, lineHeight, fromBottom) {
+
+    var pushMethod = (fromBottom)?'unshift':'push';
+
+    lineHeight = (fromBottom)?-lineHeight:lineHeight;
+
+    var lines = [];
+    var y = y;
+    var line = '';
+    var words = text.split(' ');
+
+    for (var n = 0; n < words.length; n++) {
+      var testLine = line + ' ' + words[n];
+      var metrics = context.measureText(testLine);
+      var testWidth = metrics.width;
+
+      if (testWidth > maxWidth) {
+        lines[pushMethod](line);
+        line = words[n] + ' ';
+      } else {
+        line = testLine;
+      }
+    }
+    lines[pushMethod](line);
+
+    for (var k in lines) {
+      context.strokeText(lines[k], x, y + lineHeight * k);
+      context.fillText(lines[k], x, y + lineHeight * k);
+    }
+
+
+  }
