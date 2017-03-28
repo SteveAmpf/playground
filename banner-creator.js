@@ -121,8 +121,8 @@ Create Canvas Elements
 
   // Set the text style to that to which we are accustomed
 
-  canvas.width = 1180;
-  canvas.height = 520;
+  canvas.width = 444;
+  canvas.height = 296;
 
   //  Grab the nodes
   var img = document.getElementById('start-image');
