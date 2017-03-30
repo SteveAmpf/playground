@@ -110,6 +110,7 @@ function textPreview(event) {
       //set up as background image
       $(".banner-preview-dl").css('background-image', 'url(' + imgUploadPath + ')');
       $(".banner-preview-dl").css({'background-size':'cover'});
+      $(".banner-preview-dl").css({'background-position':'center'});   
   }
 
   // Homepage Banner Elements

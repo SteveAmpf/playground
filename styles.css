@@ -226,7 +226,6 @@ img {
   border: 1px solid #ededed;
   height: 400px;
   margin: 30px 0 30px 0;
-  position: relative;
   width: 1600px;
 }
 
@@ -281,7 +280,7 @@ img {
   padding: 20px 0 0 30px;
   text-align: left;
   text-shadow: 0 0 12px rgba(0,0,0,.5);
-  width: 50%;
+  width: 60%;
 }
 
 .disclaimer {
