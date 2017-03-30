@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ameriprise Financial | Banner Creator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="suitcss.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="third-party/ejs_production.js" type="text/javascript"></script>
+  <script src="banner-creator.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+</head>
+
+<div class="container-fluid"><!--Begin Main Content Wrapper -->
+
+
+  <div class="banner-preview-bucket" id="logout-banner-1"><!-- start banner preview bucket -->
+    <div class="Grid Grid--fit Grid--withGutter"><!-- start grid -->
+      <div class="gridWrapperDivider"><!-- start grid wrapper -->
+        <div class="Grid-cell--75"><!-- start grid cell -->
+          <h3>Banner Preview</h3>
+          <p class="description">Once your have filled out the form above, add your background image or color below and generate your final banner.</p>
+
+          <div id="banner-preview-holder"><!-- Start banner-preview-holder -->
+
+            <!-- Start HP Banner Preview -->
+            <div class="banner-preview-hp" id="bannerPreview"><!-- start banner preview -->
+              <h2 class="bannerHeadline" id="headline"></h2>
+              <p class="subhead" id="subhead"></p>
+              <a class="bannerBTN" id="bannerCTA"></a>
+              <p class="disclaimer" id="disclaimer"></p>
+            </div>
+            <!-- End HP Banner Preview -->
+
+            <!-- Start LO Banner Preview -->
+            <div class="banner-preview-lo" id="bannerPreview"><!-- start banner preview -->
+              <h2 class="bannerHeadline" id="headline"></h2>
+              <p class="subhead" id="subhead"></p>
+              <a class="bannerBTN" id="bannerCTA"></a>
+              <p class="disclaimer" id="disclaimer"></p>
+            </div>
+            <!-- End HP Banner Preview -->
+
+            <!-- Start DL Banner Preview -->
+            <div class="banner-preview-dl" id="bannerPreview"><!-- start banner preview -->
+              <h2 class="bannerHeadline" id="headline"></h2>
+            </div>
+            <!-- End HP Banner Preview -->
+
+            <div class="Grid Grid--fit Grid--withGutter"><!-- Start Grid -->
+              <div class="Grid-cell--35"><!-- Start Grid Cell -->
+                <div class="button-grey" id="exportPNG">export as PNG</div>
+              </div><!-- end grid cell -->
+              <div class="Grid-cell--35"><!-- Start Grid Cell -->
+                <div class="button-grey" id="code">get code for da</div>
+              </div><!-- end grid cell -->
+              <div class="Grid-cell--30"></div>
+            </div><!-- end grid -->
+
+          </div><!--end of banner-preview-holder -->
+
+        </div><!-- End Grid Cell -->
+      </div><!-- End Grid Wrapper -->
+    </div><!-- End Grid -->
+  </div><!-- End banner preview bucket -->
+
+</div>

@@ -96,13 +96,36 @@ function textPreview(event) {
 
   if(imgUploadPath){
       //set up as background image
-      $(".banner-preview").css('background-image', 'url(' + imgUploadPath + ')');
+      $(".banner-preview-hp").css('background-image', 'url(' + imgUploadPath + ')');
+      $(".banner-preview-hp").css({'background-size':'cover'});
   }
 
-  $(".banner-preview .bannerHeadline").html(headline);
-  $(".banner-preview .subhead").html(subhead);
-  $(".banner-preview .disclaimer").html(disclaimer);
-  $(".banner-preview .bannerBTN").html(cta);
+  if(imgUploadPath){
+      //set up as background image
+      $(".banner-preview-lo").css('background-image', 'url(' + imgUploadPath + ')');
+      $(".banner-preview-lo").css({'background-size':'cover'});
+  }
+
+  if(imgUploadPath){
+      //set up as background image
+      $(".banner-preview-dl").css('background-image', 'url(' + imgUploadPath + ')');
+      $(".banner-preview-dl").css({'background-size':'cover'});
+  }
+
+  // Homepage Banner Elements
+  $(".banner-preview-hp .bannerHeadline-hp").html(headline);
+  $(".banner-preview-hp .subhead").html(subhead);
+  $(".banner-preview-hp .disclaimer").html(disclaimer);
+  $(".banner-preview-hp .bannerBTN").html(cta);
+
+  // Log-in/Out Banner Elements
+  $(".banner-preview-lo .bannerHeadline-lo").html(headline);
+  $(".banner-preview-lo .subhead").html(subhead);
+  $(".banner-preview-lo .disclaimer").html(disclaimer);
+  $(".banner-preview-lo .bannerBTN").html(cta);
+
+  // Department Level Banner Elements
+  $(".banner-preview-dl .bannerHeadline-dl").html(headline);
 
   //scroll down to banner preview
     $('html, body').animate({
